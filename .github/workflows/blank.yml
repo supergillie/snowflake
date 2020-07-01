@@ -31,4 +31,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        javac -Xdiag src/peter/com/gol.java
+        javac src/peter/com/gol.java
