@@ -1,5 +1,3 @@
-package peter.com;
-
 class gameoflife {
     public static void main (String[] args)
     {
