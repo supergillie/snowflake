@@ -1,6 +1,6 @@
 package peter.com;
 
-class gol{
+class gameoflife {
     public static void main (String[] args)
     {
         System.out.println("hejsan hoppsan svjhjhejsan");
