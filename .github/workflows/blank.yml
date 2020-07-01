@@ -31,5 +31,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        javac src/peter/com/gol.java
-        java out/production/gameoflife/peter/com/gol.class
+        java src/peter/com/gol.java
