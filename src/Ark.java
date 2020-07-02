@@ -7,38 +7,8 @@ public class Ark {
     Integer heigth;
     Integer width;
     List<Cell> cells = new LinkedList<>();
-    public Integer getHeigth() {
-        return heigth;
-    }
-    public void setHeigth(Integer heigth) {
-        this.heigth = heigth;
-    }
-    public Integer getWidth() {
-        return width;
-    }
-    public void setWidth(Integer width) {
-        this.width = width;
-    }
-    public Ark(Integer heigth, Integer width) {
-        this.heigth = heigth;
-        this.width = width;
-        int radPos = 1;
-        int kolumnPos = 1;
 
-        while (radPos <= heigth) {
-            while (kolumnPos <= width){
-                Gridposition position = new Gridposition(kolumnPos, radPos);
-                cells.add(new Cell(position, false));
-                kolumnPos++;
-            }
-            kolumnPos = 1;
-            radPos++;
-        }
-    }
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        //System.out.flush();
-    }
+
     public void skrivutmig(Ark ark) {
         try {
             TimeUnit.MILLISECONDS.sleep(19);
@@ -74,6 +44,40 @@ public class Ark {
         int random = (int)(Math.random() * antalceller);
 
         ark.cells.get(random).setAlive(ark.cells.get(random).getAlive().equals(" "));
+    }
+
+
+    public Integer getHeigth() {
+        return heigth;
+    }
+    public void setHeigth(Integer heigth) {
+        this.heigth = heigth;
+    }
+    public Integer getWidth() {
+        return width;
+    }
+    public void setWidth(Integer width) {
+        this.width = width;
+    }
+    public Ark(Integer heigth, Integer width) {
+        this.heigth = heigth;
+        this.width = width;
+        int radPos = 1;
+        int kolumnPos = 1;
+
+        while (radPos <= heigth) {
+            while (kolumnPos <= width){
+                Gridposition position = new Gridposition(kolumnPos, radPos);
+                cells.add(new Cell(position, false));
+                kolumnPos++;
+            }
+            kolumnPos = 1;
+            radPos++;
+        }
+    }
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        //System.out.flush();
     }
     public List<Cell> getCells() {
         return cells;

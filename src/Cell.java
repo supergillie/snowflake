@@ -12,8 +12,6 @@ public class Cell {
                 '}';
     }
 
-
-
     public Gridposition getPosition() {
         return position;
     }
