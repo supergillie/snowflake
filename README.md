@@ -9,7 +9,7 @@ kompilera: javac *.java
 
 
 köra: java -cp . Gol
-
+ 
 ![Screenshot](resources/gol.jpg)
 
 
