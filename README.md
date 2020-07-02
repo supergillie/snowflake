@@ -5,7 +5,7 @@ för att köras i terminal på mac:
 Peters-MacBook-Pro:src pekr$ 
 
 
-kompilera: javac -cp . *.java
+kompilera: javac *.java
 
 
 köra: java -cp . Gol
