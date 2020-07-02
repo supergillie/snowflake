@@ -24,7 +24,7 @@ public class Cell {
 
     public String getAlive() {
         if(!alive){
-            return("O");
+            return(" ");
         }
         else
             return "X";

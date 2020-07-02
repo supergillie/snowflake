@@ -39,8 +39,8 @@ public class Ark {
     public Ark(Integer heigth, Integer width) {
         this.heigth = heigth;
         this.width = width;
-        Integer radPos = 1;
-        Integer kolumnPos = 1;
+        int radPos = 1;
+        int kolumnPos = 1;
 
         while (radPos <= heigth) {
             while (kolumnPos <= width){
@@ -63,11 +63,11 @@ public class Ark {
 
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
-        System.out.flush();
+        //System.out.flush();
     }
     public void skrivutmig(Ark ark) {
         try {
-            TimeUnit.MILLISECONDS.sleep(4);
+            TimeUnit.MILLISECONDS.sleep(19);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -76,14 +76,14 @@ public class Ark {
         List<Cell> celler = ark.cells;
         //celler.forEach(cell -> System.out.println(cell.toString()));
 
-        Integer höjd = ark.getHeigth();
-        Integer bredd = ark.getWidth();
-        Integer cursorRad = 1;
-        Integer cursorKolumn = 1;
+        int hojd = ark.getHeigth();
+        int bredd = ark.getWidth();
+        int cursorRad = 1;
+        int cursorKolumn = 1;
 
-        Integer index = 0;
+        int index = 0;
 
-        while(cursorRad <= höjd ){
+        while(cursorRad <= hojd ){
             while(cursorKolumn <= bredd){
                 System.out.print(celler.get(index).getAlive() + "");
                 cursorKolumn++;
@@ -95,13 +95,11 @@ public class Ark {
         }
     }
 
-    public void skumpanått(Ark ark) {
+    public void skumpanatt(Ark ark) {
 
-        Integer antalceller = ark.getCells().size();
+        int antalceller = ark.getCells().size();
         int random = (int)(Math.random() * antalceller);
 
-        if(ark.cells.get(random).getAlive() == "O"){
-            ark.cells.get(random).setAlive(true);
-        }
+        ark.cells.get(random).setAlive(ark.cells.get(random).getAlive().equals(" "));
     }
 }
