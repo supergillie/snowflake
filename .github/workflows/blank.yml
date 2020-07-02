@@ -24,12 +24,13 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '9.0.4' # The JDK version to make available on the path.
-        java-package: jdkj # (jre, jdk, or jdk+fx) - defaults to jdk
+        java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
         architecture: x64 # (x64 or x86) - defaults to x64
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
+           echo $CLASSPATH
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
