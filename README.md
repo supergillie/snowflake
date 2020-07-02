@@ -5,6 +5,9 @@ för att köras i terminal på mac:
 Peters-MacBook-Pro:src pekr$ 
 
 
+stå i: cd /Users/pekr/projects/gameoflife/src
+
+
 kompilera: javac *.java
 
 

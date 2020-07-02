@@ -10,13 +10,11 @@ public class Ark {
 
 
     public void skrivutmig(Ark ark) {
-        try {
-            TimeUnit.MILLISECONDS.sleep(19);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+        pause(19);
         clearScreen();
         //System.out.println(LocalDateTime.now().toString());
+
         List<Cell> celler = ark.cells;
         //celler.forEach(cell -> System.out.println(cell.toString()));
 
@@ -24,7 +22,6 @@ public class Ark {
         int bredd = ark.getWidth();
         int cursorRad = 1;
         int cursorKolumn = 1;
-
         int index = 0;
 
         while(cursorRad <= hojd ){
@@ -38,6 +35,15 @@ public class Ark {
             System.out.println();
         }
     }
+
+    private void pause(int milliseconds) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void skumpanatt(Ark ark) {
 
         int antalceller = ark.getCells().size();
@@ -50,14 +56,8 @@ public class Ark {
     public Integer getHeigth() {
         return heigth;
     }
-    public void setHeigth(Integer heigth) {
-        this.heigth = heigth;
-    }
     public Integer getWidth() {
         return width;
-    }
-    public void setWidth(Integer width) {
-        this.width = width;
     }
     public Ark(Integer heigth, Integer width) {
         this.heigth = heigth;
