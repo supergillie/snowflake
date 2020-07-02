@@ -11,7 +11,7 @@ public class Ark {
 
     public void skrivutmig(Ark ark) {
 
-        pause(19);
+        pause(339);
         clearScreen();
         //System.out.println(LocalDateTime.now().toString());
 
