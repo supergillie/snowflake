@@ -38,4 +38,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo tessdsdt, and deploy your project.
-        javac gameoflife
+        javac src/peter/com/gol
