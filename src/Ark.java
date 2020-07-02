@@ -1,7 +1,10 @@
-package peter.com;
 
+
+
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Ark {
     Integer heigth;
@@ -63,8 +66,13 @@ public class Ark {
         System.out.flush();
     }
     public void skrivutmig(Ark ark) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(4);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         clearScreen();
-
+        //System.out.println(LocalDateTime.now().toString());
         List<Cell> celler = ark.cells;
         //celler.forEach(cell -> System.out.println(cell.toString()));
 
@@ -77,7 +85,7 @@ public class Ark {
 
         while(cursorRad <= höjd ){
             while(cursorKolumn <= bredd){
-                System.out.print(celler.get(index).getAlive() + "  ");
+                System.out.print(celler.get(index).getAlive() + "");
                 cursorKolumn++;
                 index++;
             }
@@ -90,7 +98,7 @@ public class Ark {
     public void skumpanått(Ark ark) {
 
         Integer antalceller = ark.getCells().size();
-        int random = (int)(Math.random() * antalceller + 1);
+        int random = (int)(Math.random() * antalceller);
 
         if(ark.cells.get(random).getAlive() == "O"){
             ark.cells.get(random).setAlive(true);

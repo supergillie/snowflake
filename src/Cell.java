@@ -1,4 +1,4 @@
-package peter.com;
+
 
 public class Cell {
     Gridposition position;
@@ -23,7 +23,7 @@ public class Cell {
     }
 
     public String getAlive() {
-        if(alive == false){
+        if(!alive){
             return("O");
         }
         else

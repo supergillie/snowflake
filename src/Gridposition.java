@@ -1,4 +1,4 @@
-package peter.com;
+
 
 public class Gridposition {
     Integer kolumnposition;
