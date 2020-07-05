@@ -1,17 +1,9 @@
-# gameoflife
-för att köras i terminal på mac:
+# snowflake
+To be run in mac terminal:
 
-
-Peters-MacBook-Pro:src pekr$ 
-
-
-stå i: cd /Users/pekr/projects/gameoflife/src
-
-
-kompilera: javac *.java
-
-
-köra: java -cp . Gol
+cd /Users/pekr/projects/gameoflife/src
+javac *.java
+java -cp . Gol
  
 ![Screenshot](resources/gol.jpg)
 
